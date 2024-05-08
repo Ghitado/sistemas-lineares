@@ -1,0 +1,22 @@
+.card {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+p-card {
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
+}
+

@@ -1,14 +1,22 @@
-import { Component } from '@angular/core';
+import { routes } from './app.routes';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CardModule } from 'primeng/card';
+import { NavbarComponent } from "./shared/navbar/navbar.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    imports: [
+      CommonModule,
+      RouterOutlet,
+      NavbarComponent,
+      CardModule
+    ]
 })
+
 export class AppComponent {
-  title = 'sistemas-lineares';
 }

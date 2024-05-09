@@ -1,6 +1,6 @@
-import { routes } from './app.routes';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { CardModule } from 'primeng/card';
 import { NavbarComponent } from "./shared/navbar/navbar.component";
@@ -14,7 +14,8 @@ import { NavbarComponent } from "./shared/navbar/navbar.component";
       CommonModule,
       RouterOutlet,
       NavbarComponent,
-      CardModule
+      CardModule,
+      ReactiveFormsModule
     ]
 })
 

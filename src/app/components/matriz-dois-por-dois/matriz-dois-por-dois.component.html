@@ -1,56 +1,87 @@
-<div class="row">
-  <div class="card">
-    <p-floatLabel>
-      <p-inputNumber inputId="integeronly" size="1" [(ngModel)]="a" required />
-      <label for="number-input">a</label> X
-    </p-floatLabel>
+<form [formGroup]="form">
+  <div class="row">
+    <div class="card">
+      <p-floatLabel>
+        <p-inputNumber inputId="integeronly" size="1" formControlName="a" required />
+        <label for="number-input">a</label> X
+      </p-floatLabel>
+    </div>
+
+    <div class="card">
+      <p-floatLabel>
+        <p-inputNumber inputId="integeronly" size="1" formControlName="b" required />
+        <label for="number-input">b</label> Y =
+      </p-floatLabel>
+    </div>
+
+    <div class="card">
+      <p-floatLabel>
+        <p-inputNumber inputId="integeronly" size="1" formControlName="r1" required />
+        <label for="number-input"></label>
+      </p-floatLabel>
+    </div>
   </div>
 
-  <div class="card">
-    <p-floatLabel>
-      <p-inputNumber inputId="integeronly" size="1" [(ngModel)]="b" required />
-      <label for="number-input">b</label> Y =
-    </p-floatLabel>
+  <div class="row">
+    <div class="card">
+      <p-floatLabel>
+        <p-inputNumber inputId="integeronly" size="1" formControlName="c" required />
+        <label for="number-input">c</label> X
+      </p-floatLabel>
+    </div>
+
+    <div class="card">
+      <p-floatLabel>
+        <p-inputNumber inputId="integeronly" size="1" formControlName="d" required />
+        <label for="number-input">d</label> Y =
+      </p-floatLabel>
+    </div>
+
+    <div class="card">
+      <p-floatLabel>
+        <p-inputNumber inputId="integeronly" size="1" formControlName="r2" required />
+        <label for="number-input"></label>
+      </p-floatLabel>
+    </div>
   </div>
 
-  <div class="card">
-    <p-floatLabel>
-      <p-inputNumber inputId="integeronly" size="1" [(ngModel)]="x" required />
-      <label for="number-input">x</label>
-    </p-floatLabel>
+  <div class="button">
+    <p-button label="Calcular" (onClick)="isFilled()"></p-button>
+    <p-button label="Limpar" (onClick)="clear()"></p-button>
   </div>
-</div>
-
-<div class="row">
-  <div class="card">
-    <p-floatLabel>
-      <p-inputNumber inputId="integeronly" size="1" [(ngModel)]="c" required />
-      <label for="number-input">c</label> X
-    </p-floatLabel>
-  </div>
-
-  <div class="card">
-    <p-floatLabel>
-      <p-inputNumber inputId="integeronly" size="1" [(ngModel)]="d" required />
-      <label for="number-input">d</label> Y =
-    </p-floatLabel>
-  </div>
-
-  <div class="card">
-    <p-floatLabel>
-      <p-inputNumber inputId="integeronly" size="1" [(ngModel)]="y" required />
-      <label for="number-input">y</label>
-    </p-floatLabel>
-  </div>
-</div>
-
-<div class="button">
-  <p-button label="Calcular" (onClick)="isFilled()"></p-button>
-  <p-button label="Limpar" (onClick)="clear()"></p-button>
-</div>
+</form>
 
 <p-divider />
 
 <div class="row">
+  <div class="card">
+    <p-floatLabel>
+      <input type="text" pInputText [(ngModel)]="X" [disabled]="true" style="width: 140px;" />
+      <label for="number-input">X</label>
+    </p-floatLabel>
+  </div>
 
+  <div class="card">
+    <p-floatLabel>
+      <input type="text" pInputText [(ngModel)]="Y" [disabled]="true" style="width: 140px;" />
+      <label for="number-input">Y</label>
+    </p-floatLabel>
+  </div>
+
+  <div class="card">
+    <p-floatLabel>
+      <input type="text" pInputText [(ngModel)]="det" [disabled]="true" style="width: 80px;" />
+      <label for="number-input">D</label>
+    </p-floatLabel>
+  </div>
 </div>
+
+<div class="row">
+  <div class="card">
+    <p-floatLabel>
+      <input type="text" pInputText [(ngModel)]="classification" [disabled]="true" style="width: 290px;" />
+      <label for="number-input">Classificação</label>
+    </p-floatLabel>
+  </div>
+</div>
+

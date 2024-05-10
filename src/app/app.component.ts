@@ -15,9 +15,24 @@ import { NavbarComponent } from "./shared/navbar/navbar.component";
       RouterOutlet,
       NavbarComponent,
       CardModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
     ]
 })
 
 export class AppComponent {
+
+  changeTitle(): string {
+    const currentPath = window.location.pathname;
+
+    if (currentPath === '/')
+      return 'Xês'
+
+    if (currentPath === '/matriz-dois-por-dois')
+      return 'Matriz 2x2'
+
+    if (currentPath === '/matriz-tres-por-tres')
+      return 'Matriz 3x3'
+
+    return '';
+  }
 }

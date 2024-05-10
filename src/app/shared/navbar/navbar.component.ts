@@ -21,17 +21,20 @@ export class NavbarComponent implements OnInit {
       {
         label: 'Home',
         icon: 'pi pi-home',
-        route: '/'
+        route: '/',
+        title: 'Xês'
       },
       {
         label: 'Matriz 2x2',
         icon: 'pi pi-palette',
-        route: '/matriz-dois-por-dois'
+        route: '/matriz-dois-por-dois',
+        title: 'Matriz 2x2'
       },
       {
         label: 'Matriz 3x3',
         icon: 'pi pi-link',
-        route: '/matriz-tres-por-tres'
+        route: '/matriz-tres-por-tres',
+        title: 'Matriz 3x3'
       }
     ];
   }

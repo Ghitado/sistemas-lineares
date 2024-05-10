@@ -67,11 +67,27 @@
       <label for="number-input">Y</label>
     </p-floatLabel>
   </div>
+</div>
+
+<div class="row">
+  <div class="card">
+    <p-floatLabel>
+      <input type="text" pInputText [(ngModel)]="det" [disabled]="true" style="width: 87px;" />
+      <label for="number-input">Det</label>
+    </p-floatLabel>
+  </div>
 
   <div class="card">
     <p-floatLabel>
-      <input type="text" pInputText [(ngModel)]="det" [disabled]="true" style="width: 80px;" />
-      <label for="number-input">D</label>
+      <input type="text" pInputText [(ngModel)]="detX" [disabled]="true" style="width: 87px;" />
+      <label for="number-input">DetX</label>
+    </p-floatLabel>
+  </div>
+
+  <div class="card">
+    <p-floatLabel>
+      <input type="text" pInputText [(ngModel)]="detY" [disabled]="true" style="width: 87px;" />
+      <label for="number-input">DetY</label>
     </p-floatLabel>
   </div>
 </div>

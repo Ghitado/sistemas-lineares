@@ -36,19 +36,19 @@ export class MatrizDoisPorDoisComponent implements OnInit {
   protected x!: number;
   protected y!: number;
   protected detA!: number;
+  protected detX!: number;
+  protected detY!: number;
   protected X: string = '';
-  public Y: string = '';
+  protected Y: string = '';
   protected det: string = '';
+  protected detx: string = '';
+  protected dety: string = '';
   protected classification!: string;
 
   constructor(private formBuilderService: FormBuilder) {}
 
   ngOnInit(): void {
-    this.form.reset();
-    this.X = '';
-    this.Y = '';
-    this.det = '';
-    this.classification = '';
+    this.clear();
   }
 
   isFilled() {
@@ -68,18 +68,28 @@ export class MatrizDoisPorDoisComponent implements OnInit {
   }
 
   calculate() {
-    const { a, b, c, d, r1, r2 } = this.form.value;
-    this.detA = (a! * d!) - (b! * c!);
-    this.det = this.detA.toString();
-
-    this.calcDets(a!, b!, c!, d!, r1!, r2!);
-    this.toRank(a!, b!, c!, d!, r1!, r2!);
+    this.calculateDeterminants();
+    this.findXY()
+    this.toRank();
   }
 
-  calcDets(a:number, b:number, c:number, d:number, r1:number, r2:number) {
+  calculateDeterminants() {
+    const _ = this.form.value;
+
+    this.detA = (_.a! * _.d!) - (_.b! * _.c!);
+    this.detX = (_.r1! * _.d!) - (_.r2! * _.b!);
+    this.detY = (_.a! * _.r2!) - (_.c! * _.r1!);
+
+    this.det = this.detA.toString();
+    this.detx = this.detX.toString();
+    this.dety = this.detY.toString();
+  }
+
+  findXY() {
     if (this.detA !== 0) {
-      this.x = ((r1 * d) - (r2 * b)) / this.detA;
-      this.y = ((a * r2) - (c * r1)) / this.detA;
+      this.x = this.detX / this.detA;
+      this.y = this.detY / this.detA;
+
       this.X = this.x.toString();
       this.Y = this.y.toString();
     } else {
@@ -88,10 +98,12 @@ export class MatrizDoisPorDoisComponent implements OnInit {
     }
   }
 
-  toRank(a:number, b:number, c:number, d:number, r1:number, r2:number) {
+  toRank() {
+    const _ = this.form.value;
+
     if (this.detA !== 0) {
       this.classification = "Sistema determinado";
-    } else if ((a / c === b / d) && (a / c === r1 / r2) && (b / d === r1 / r2)) {
+    } else if ((_.a!/_.c! === _.b!/_.d!) && (_.a!/_.c! === _.r1!/_.r2!) && (_.b!/_.d! === _.r1!/_.r2!)) {
       this.classification = "Sistema Possivel e Indeterminado";
     } else {
       this.classification = "Sistema Impossivel";

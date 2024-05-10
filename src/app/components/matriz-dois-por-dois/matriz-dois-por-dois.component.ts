@@ -64,6 +64,8 @@ export class MatrizDoisPorDoisComponent implements OnInit {
     this.X = '';
     this.Y = '';
     this.det = '';
+    this.detx = '';
+    this.dety = '';
     this.classification = '';
   }
 

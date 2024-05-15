@@ -33,16 +33,11 @@ export class MatrizDoisPorDoisComponent implements OnInit {
     r2: [0, Validators.required],
   })
 
-  protected x!: number;
-  protected y!: number;
-  protected detA!: number;
-  protected detX!: number;
-  protected detY!: number;
-  protected X: string = '';
-  protected Y: string = '';
-  protected det: string = '';
-  protected detx: string = '';
-  protected dety: string = '';
+  protected x!: number | string | null;
+  protected y!: number | string | null;
+  protected detA!: number | null;
+  protected detX!: number | null;
+  protected detY!: number | null;
   protected classification!: string;
 
   constructor(private formBuilderService: FormBuilder) {}
@@ -61,11 +56,11 @@ export class MatrizDoisPorDoisComponent implements OnInit {
 
   clear() {
     this.form.reset();
-    this.X = '';
-    this.Y = '';
-    this.det = '';
-    this.detx = '';
-    this.dety = '';
+    this.x = null;
+    this.y = null;
+    this.detA = null;
+    this.detX = null;
+    this.detY = null;
     this.classification = '';
   }
 
@@ -81,22 +76,15 @@ export class MatrizDoisPorDoisComponent implements OnInit {
     this.detA = (_.a! * _.d!) - (_.b! * _.c!);
     this.detX = (_.r1! * _.d!) - (_.r2! * _.b!);
     this.detY = (_.a! * _.r2!) - (_.c! * _.r1!);
-
-    this.det = this.detA.toString();
-    this.detx = this.detX.toString();
-    this.dety = this.detY.toString();
   }
 
   findXY() {
     if (this.detA !== 0) {
-      this.x = this.detX / this.detA;
-      this.y = this.detY / this.detA;
-
-      this.X = this.x.toString();
-      this.Y = this.y.toString();
+      this.x = this.detX! / this.detA!;
+      this.y = this.detY! / this.detA!;
     } else {
-      this.X = 'Indeterminado';
-      this.Y = 'Indeterminado';
+      this.x = 'Indeterminado';
+      this.y = 'Indeterminado';
     }
   }
 

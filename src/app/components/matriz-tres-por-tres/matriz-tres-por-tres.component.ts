@@ -39,20 +39,13 @@ export class MatrizTresPorTresComponent implements OnInit {
     r3: [0, Validators.required]
   })
 
-  protected x!: number;
-  protected y!: number;
-  protected z!: number;
-  protected detA!: number;
-  protected detX!: number;
-  protected detY!: number;
-  protected detZ!: number;
-  protected X: string = '';
-  protected Y: string = '';
-  protected Z: string = '';
-  protected det: string = '';
-  protected detx: string = '';
-  protected dety: string = '';
-  protected detz: string = '';
+  protected x!: number | string | null;
+  protected y!: number | string | null;
+  protected z!: number | string | null;
+  protected detA!: number | null;
+  protected detX!: number | null;
+  protected detY!: number | null;
+  protected detZ!: number | null;
   protected classification!: string;
 
   constructor(private formBuilderService: FormBuilder) {}
@@ -71,13 +64,13 @@ export class MatrizTresPorTresComponent implements OnInit {
 
   clear() {
     this.form.reset();
-    this.X = '';
-    this.Y = '';
-    this.Z = '';
-    this.det = '';
-    this.detx = '';
-    this.dety = '';
-    this.detz = '';
+    this.x = null;
+    this.y = null;
+    this.z = null;
+    this.detA = null;
+    this.detX = null;
+    this.detY = null;
+    this.detZ = null;
     this.classification = '';
   }
 
@@ -94,26 +87,17 @@ export class MatrizTresPorTresComponent implements OnInit {
     this.detX = _.r1! * (_.e! * _.i! - _.h! * _.f!) - _.b! * (_.r2! * _.i! - _.r3! * _.f!) + _.c! * (_.r2! * _.h! - _.r3! * _.e!);
     this.detY = _.a! * (_.r2! * _.i! - _.r3! * _.f!) - _.r1! * (_.d! * _.i! - _.g! * _.f!) + _.c! * (_.d! * _.r3! - _.g! * _.r2!);
     this.detZ = _.a! * (_.e! * _.r3! - _.h! * _.r2!) - _.b! * (_.d! * _.r3! - _.g! * _.r2!) + _.r1! * (_.d! * _.h! - _.g! * _.e!);
-
-    this.det = this.detA.toString();
-    this.detx = this.detX.toString();
-    this.dety = this.detY.toString();
-    this.detz = this.detZ.toString();
   }
 
   findXYZ() {
     if (this.detA !== 0) {
-      this.x = this.detX / this.detA;
-      this.y = this.detY / this.detA;
-      this.z = this.detZ / this.detA;
-
-      this.X = this.x.toString();
-      this.Y = this.y.toString();
-      this.Z = this.z.toString();
+      this.x = this.detX! / this.detA!;
+      this.y = this.detY! / this.detA!;
+      this.z = this.detZ! / this.detA!;
     } else {
-      this.X = 'Indeterminado';
-      this.Y = 'Indeterminado';
-      this.Z = 'Indeterminado';
+      this.x = 'Indeterminado';
+      this.y = 'Indeterminado';
+      this.z = 'Indeterminado';
     }
   }
 

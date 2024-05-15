@@ -25,7 +25,7 @@ export class AppComponent {
     const currentPath = window.location.pathname;
 
     if (currentPath === '/')
-      return 'Xês'
+      return 'Xâs'
 
     if (currentPath === '/matriz-dois-por-dois')
       return 'Matriz 2x2'

@@ -122,7 +122,7 @@ export class MatrizTresPorTresComponent implements OnInit {
 
     if (this.detA !== 0) {
       this.classification = "Sistema determinado";
-    } else if ((this.deta == 0) && ((this.detx == 0) || (this.dety == 0) || (this.detz == 0)) {
+    } else if ((this.detX == 0) || (this.detY == 0) || (this.detZ == 0)) {
       this.classification = "Sistema Possivel e Indeterminado";
     } else {
       this.classification = "Sistema Impossivel";

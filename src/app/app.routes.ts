@@ -7,5 +7,5 @@ export const routes: Routes = [
   { 'path': '', component: HomeComponent },
   { 'path': 'matriz-dois-por-dois', component: MatrizDoisPorDoisComponent },
   { 'path': 'matriz-tres-por-tres', component: MatrizTresPorTresComponent },
-  { 'path': '**', redirectTo: '', pathMatch: 'full' }
+  { 'path': '**', redirectTo: '/', pathMatch: 'full' }
 ];

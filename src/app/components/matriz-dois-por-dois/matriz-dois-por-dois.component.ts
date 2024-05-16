@@ -93,7 +93,7 @@ export class MatrizDoisPorDoisComponent implements OnInit {
 
     if (this.detA !== 0) {
       this.classification = "Sistema determinado";
-    } else if ((this.detX == 0) || (this.detY == 0)) {
+    } else if ((this.detX == 0) && (this.detY == 0)) {
       this.classification = "Sistema Possivel e Indeterminado";
     } else {
       this.classification = "Sistema Impossivel";

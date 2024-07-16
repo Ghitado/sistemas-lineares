@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { CardModule } from 'primeng/card';
-import { NavbarComponent } from "./shared/navbar/navbar.component";
+import { NavbarComponent } from "./components/navbar/navbar.component";
 
 @Component({
     selector: 'app-root',

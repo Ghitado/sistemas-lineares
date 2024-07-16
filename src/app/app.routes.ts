@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { MatrizDoisPorDoisComponent } from './components/matriz-dois-por-dois/matriz-dois-por-dois.component';
-import { MatrizTresPorTresComponent } from './components/matriz-tres-por-tres/matriz-tres-por-tres.component';
+import { HomeComponent } from './pages/home/home.component';
+import { MatrizDoisPorDoisComponent } from './pages/matrizes/matriz-dois-por-dois/matriz-dois-por-dois.component';
+import { MatrizTresPorTresComponent } from './pages/matrizes/matriz-tres-por-tres/matriz-tres-por-tres.component';
 
 export const routes: Routes = [
   { 'path': '', component: HomeComponent },

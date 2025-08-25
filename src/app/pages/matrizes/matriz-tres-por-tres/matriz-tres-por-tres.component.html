@@ -2,28 +2,48 @@
   <div class="row">
     <div class="card">
       <p-floatLabel>
-        <p-inputNumber inputId="integeronly" size="1" formControlName="a" required />
+        <p-inputNumber
+          inputId="integeronly"
+          size="1"
+          formControlName="a"
+          required
+        />
         <label for="number-input">a</label> X
       </p-floatLabel>
     </div>
 
     <div class="card">
       <p-floatLabel>
-        <p-inputNumber inputId="integeronly" size="1" formControlName="b" required />
+        <p-inputNumber
+          inputId="integeronly"
+          size="1"
+          formControlName="b"
+          required
+        />
         <label for="number-input">b</label> Y
       </p-floatLabel>
     </div>
 
     <div class="card">
       <p-floatLabel>
-        <p-inputNumber inputId="integeronly" size="1" formControlName="c" required />
+        <p-inputNumber
+          inputId="integeronly"
+          size="1"
+          formControlName="c"
+          required
+        />
         <label for="number-input">c</label> Z =
       </p-floatLabel>
     </div>
 
     <div class="card">
       <p-floatLabel>
-        <p-inputNumber inputId="integeronly" size="1" formControlName="r1" required />
+        <p-inputNumber
+          inputId="integeronly"
+          size="1"
+          formControlName="r1"
+          required
+        />
         <label for="number-input"></label>
       </p-floatLabel>
     </div>
@@ -32,28 +52,48 @@
   <div class="row">
     <div class="card">
       <p-floatLabel>
-        <p-inputNumber inputId="integeronly" size="1" formControlName="d" required />
+        <p-inputNumber
+          inputId="integeronly"
+          size="1"
+          formControlName="d"
+          required
+        />
         <label for="number-input">d</label> X
       </p-floatLabel>
     </div>
 
     <div class="card">
       <p-floatLabel>
-        <p-inputNumber inputId="integeronly" size="1" formControlName="e" required />
+        <p-inputNumber
+          inputId="integeronly"
+          size="1"
+          formControlName="e"
+          required
+        />
         <label for="number-input">e</label> Y
       </p-floatLabel>
     </div>
 
     <div class="card">
       <p-floatLabel>
-        <p-inputNumber inputId="integeronly" size="1" formControlName="f" required />
+        <p-inputNumber
+          inputId="integeronly"
+          size="1"
+          formControlName="f"
+          required
+        />
         <label for="number-input">f</label> Z =
       </p-floatLabel>
     </div>
 
     <div class="card">
       <p-floatLabel>
-        <p-inputNumber inputId="integeronly" size="1" formControlName="r2" required />
+        <p-inputNumber
+          inputId="integeronly"
+          size="1"
+          formControlName="r2"
+          required
+        />
         <label for="number-input"></label>
       </p-floatLabel>
     </div>
@@ -62,28 +102,48 @@
   <div class="row">
     <div class="card">
       <p-floatLabel>
-        <p-inputNumber inputId="integeronly" size="1" formControlName="g" required />
+        <p-inputNumber
+          inputId="integeronly"
+          size="1"
+          formControlName="g"
+          required
+        />
         <label for="number-input">g</label> X
       </p-floatLabel>
     </div>
 
     <div class="card">
       <p-floatLabel>
-        <p-inputNumber inputId="integeronly" size="1" formControlName="h" required />
+        <p-inputNumber
+          inputId="integeronly"
+          size="1"
+          formControlName="h"
+          required
+        />
         <label for="number-input">h</label> Y
       </p-floatLabel>
     </div>
 
     <div class="card">
       <p-floatLabel>
-        <p-inputNumber inputId="integeronly" size="1" formControlName="i" required />
+        <p-inputNumber
+          inputId="integeronly"
+          size="1"
+          formControlName="i"
+          required
+        />
         <label for="number-input">i</label> Z =
       </p-floatLabel>
     </div>
 
     <div class="card">
       <p-floatLabel>
-        <p-inputNumber inputId="integeronly" size="1" formControlName="r3" required />
+        <p-inputNumber
+          inputId="integeronly"
+          size="1"
+          formControlName="r3"
+          required
+        />
         <label for="number-input"></label>
       </p-floatLabel>
     </div>
@@ -95,73 +155,70 @@
   </div>
 </form>
 
-<p-divider />
+<p-divider></p-divider>
 
-<div class="two-columns">
-  <div class="xyz">
-    <div class="card">
+<div class="results-container">
+  <div class="xyz-results">
+    <div class="card result-card">
       <p-floatLabel>
-        <input type="text" pInputText [(ngModel)]="x" [disabled]="true" style="width: 140px;" />
+        <input type="text" pInputText [(ngModel)]="x" [disabled]="true" />
         <label for="number-input">X</label>
       </p-floatLabel>
     </div>
 
-    <div class="card">
+    <div class="card result-card">
       <p-floatLabel>
-        <input type="text" pInputText [(ngModel)]="y" [disabled]="true" style="width: 140px;" />
+        <input type="text" pInputText [(ngModel)]="y" [disabled]="true" />
         <label for="number-input">Y</label>
       </p-floatLabel>
     </div>
 
-    <div class="card">
+    <div class="card result-card">
       <p-floatLabel>
-        <input type="text" pInputText [(ngModel)]="z" [disabled]="true" style="width: 140px;" />
+        <input type="text" pInputText [(ngModel)]="z" [disabled]="true" />
         <label for="number-input">Z</label>
       </p-floatLabel>
     </div>
   </div>
 
-
-  <div class="two-rows">
-    <div class="dets">
-      <div class="card">
-        <p-floatLabel>
-          <input type="text" pInputText [(ngModel)]="detA" [disabled]="true" style="width: 137px;" />
-          <label for="number-input">DetA</label>
-        </p-floatLabel>
-      </div>
-
-      <div class="card">
-        <p-floatLabel>
-          <input type="text" pInputText [(ngModel)]="detX" [disabled]="true" style="width: 137px;" />
-          <label for="number-input">DetX</label>
-        </p-floatLabel>
-      </div>
-
-      <div class="card">
-        <p-floatLabel>
-          <input type="text" pInputText [(ngModel)]="detY" [disabled]="true" style="width: 137px;" />
-          <label for="number-input">DetY</label>
-        </p-floatLabel>
-      </div>
-
-      <div class="card">
-        <p-floatLabel>
-          <input type="text" pInputText [(ngModel)]="detZ" [disabled]="true" style="width: 137px;" />
-          <label for="number-input">DetZ</label>
-        </p-floatLabel>
-      </div>
+  <div class="determinants-results">
+    <div class="card result-card">
+      <p-floatLabel>
+        <input type="text" pInputText [(ngModel)]="detA" [disabled]="true" />
+        <label for="number-input">DetA</label>
+      </p-floatLabel>
     </div>
+    <div class="card result-card">
+      <p-floatLabel>
+        <input type="text" pInputText [(ngModel)]="detX" [disabled]="true" />
+        <label for="number-input">DetX</label>
+      </p-floatLabel>
+    </div>
+    <div class="card result-card">
+      <p-floatLabel>
+        <input type="text" pInputText [(ngModel)]="detY" [disabled]="true" />
+        <label for="number-input">DetY</label>
+      </p-floatLabel>
+    </div>
+    <div class="card result-card">
+      <p-floatLabel>
+        <input type="text" pInputText [(ngModel)]="detZ" [disabled]="true" />
+        <label for="number-input">DetZ</label>
+      </p-floatLabel>
+    </div>
+  </div>
 
-    <div class="classification">
-      <div class="row">
-        <div class="card">
-          <p-floatLabel>
-            <input type="text" pInputText [(ngModel)]="classification" [disabled]="true" style="width: 290px;" />
-            <label for="number-input">Classificação</label>
-          </p-floatLabel>
-        </div>
-      </div>
+  <div class="classification-results">
+    <div class="card classification-card">
+      <p-floatLabel>
+        <input
+          type="text"
+          pInputText
+          [(ngModel)]="classification"
+          [disabled]="true"
+        />
+        <label for="number-input">Classificação</label>
+      </p-floatLabel>
     </div>
   </div>
 </div>

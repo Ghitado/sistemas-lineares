@@ -48,3 +48,51 @@ input {
   display: flex;
   flex-wrap: wrap;
 }
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.xyz-results,
+.determinants-results,
+.classification-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.result-card {
+  width: 140px;
+  padding: 12px 8px;
+}
+
+.classification-card {
+  width: 290px;
+  padding: 12px 8px;
+}
+
+input {
+  width: 100%;
+}
+
+/* Responsivo para telas menores que 620px */
+@media screen and (max-width: 620px) {
+  .xyz-results,
+  .determinants-results,
+  .classification-results {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .result-card {
+    width: 90%;
+  }
+
+  .classification-card {
+    width: 95%;
+  }
+}

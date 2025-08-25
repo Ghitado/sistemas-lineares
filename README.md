@@ -2,6 +2,13 @@
 
 Aplicação web feita em **Angular 17** para resolver sistemas lineares 2x2 e 3x3 usando determinantes. A interface utiliza **PrimeNG** para os componentes de formulário e layout.
 
+<div style="display: flex; justify-content: center; width: 100%;">
+  <img width="500" height="320" alt="image1" src="https://github.com/user-attachments/assets/7d7f86db-9db3-4833-b403-b5cb0dd4273e" />
+  <img width="500" height="320" alt="image2" src="https://github.com/user-attachments/assets/a572f425-b616-433e-b37c-db064798d32d" />
+</div>
+
+
+
 ## Funcionalidades
 
 - Resolver sistemas lineares 2x2
